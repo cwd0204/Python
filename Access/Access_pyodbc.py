@@ -13,5 +13,14 @@ crsr = cnxn.cursor()
 
 table_list = list(crsr.tables())
 
-for i in table_list:
-    print(i)
+# for i in table_list:
+#     print(i)
+table_name = 'sample taaa'
+
+query = 'select * from {}'.format(table_name)
+
+crsr.execute(query)
+
+one_row = crsr.fetchone()
+
+display(one_row[0])
