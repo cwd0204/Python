@@ -1,0 +1,3 @@
+安装提供的nodejs安装包
+安装python和一些依赖包(requirements.txt中)
+cmd窗口运行“python douyin.py”
