@@ -1,7 +1,7 @@
 import pyodbc
 
 driver = '{Microsoft Access Driver(*.mdb,*.accdb)}'
-filepath = r'C:\Users\weidongc\Desktop\Booking\2020\2020 CN Ads Booking v11.accdb'
+filepath = r'C:\Users\weidongc\Desktop\Booking\2020\2020 CN Ads Booking v12.accdb'
 
 myDataSource = pyodbc.dataSources()
 access_drive = myDataSource['MS Access Database']
@@ -15,12 +15,16 @@ table_list = list(crsr.tables())
 
 # for i in table_list:
 #     print(i)
-table_name = 'sample taaa'
+table_name = 'wbr'
 
 query = 'select * from {}'.format(table_name)
 
+
 crsr.execute(query)
 
-one_row = crsr.fetchone()
+#print(result)
+# df = pd.DataFrame()
+#
+# df.append(query)
 
-display(one_row[0])
+# one_row = crsr.fetchall()
