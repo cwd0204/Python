@@ -6,7 +6,6 @@ SELECT Inventory_All.Package_ID,
        Booking.KAM_Owner AS KAM,
        Company.Brand_Name AS Brand,
        Booking.Actual_Start_Date AS Booking_Start_Date,
-       datepart("ww", Booking.Actual_Start_Date) AS Week_Num,
        Booking.Actual_End_Date AS Booking_End_Date,
        Booking.Actual_Price / DLookUp("Fx_rate", "Currency", "Currency='" & [Booking.Currency] & "'") AS Actual_Price,
        Contract_Mail.Contract_Received_Date,
@@ -16,6 +15,7 @@ SELECT Inventory_All.Package_ID,
        Booking.GL,
        Company.VendorCode_SellerID,
        Company.Legal_Entity_Name,
+       
        IIF(Inventory_All.Package_Slot LIKE "*AMS*", "HAMS", "HEAD") AS Product
 FROM ((Inventory_All
        LEFT JOIN Booking ON Inventory_All.Package_ID = Booking.Package_ID)
