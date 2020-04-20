@@ -21,6 +21,8 @@ query = 'select * from {}'.format(table_name)
 
 
 crsr.execute(query)
+crsr.close()
+cnxn.close()
 
 #print(result)
 # df = pd.DataFrame()
