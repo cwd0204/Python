@@ -1,7 +1,5 @@
-# 作者: Charles
-# 公众号: Charles的皮卡丘
-# 抖音下载器V4.0
 #coding:utf8
+
 import os
 import re
 import json
@@ -18,6 +16,7 @@ warnings.filterwarnings("ignore")
 # 抖音视频下载类
 # 视频下载后保存在抖音号对应的昵称名文件夹下
 # 脚本运行需先安装nodejs: https://nodejs.org/
+
 class douyin():
     def __init__(self):
         self.headers = {
@@ -40,7 +39,7 @@ class douyin():
         self.user_url = 'https://www.amemv.com/aweme/v1/aweme/post/?user_id={}&max_cursor=0&count={}&aid=1128&_signature={}&dytk={}'
         print('[INFO]:Douyin App-Video downloader...')
         print('[Version]: V4.0')
-        print('[Author]: Charles')
+        # print('[Author]: Charles')
         print('[HELP]: Enter user id to download videos, Enter <q> to quit...')
     # 外部调用运行
     def run(self):
