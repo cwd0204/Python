@@ -43,3 +43,4 @@ time1.hour = 25
 
 print('Calling method printMilitary after alteration:')
 time1.printMilitary()
+print('Done')
