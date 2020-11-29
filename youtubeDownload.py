@@ -5,7 +5,7 @@ import os
 
 #youtube-dl -v --exec "mv {} ./Downloads/{}" url
 
-if len(sys.argv) < 2:
+if len(sys.argv) < 2 or len(sys.argv) >5:
     print('Usage <script> <URL> or <script> <URL> <Folder>')
     sys.exit()
 
