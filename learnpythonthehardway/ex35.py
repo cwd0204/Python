@@ -1,5 +1,12 @@
 from sys import exit
 
+
+
+def dead(why):
+    print(why,' ,Good job!')
+    exit(0)
+
+
 def gold_room():
     print('This room is full of gold.How much do you take ?')
     next = input('> ')
@@ -48,9 +55,7 @@ def cthulhu_room():
     else:
         cthulhu_room()
 
-def dead(why):
-    print(why,'Good job!')
-    exit(0)
+
 
 def start():
     print('You are in a dark room')
