@@ -35,7 +35,7 @@ def bear_room():
             print('I got no idea what that means')
 
 def cthulhu_room():
-    print(Here you see the great evil cthulhu)
+    print('Here you see the great evil cthulhu')
     print('He, it, whatever stares at you and you go insane')
     print('Do you flee for your life or eat your head ?')
 
